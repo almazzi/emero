@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html ng-app="emeroto">
+<head lang="en" >
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="bower_components/booty/css/bootstrap.css"/>
+    <link rel="stylesheet" href="supplementary.css"/>
+</head>
+<body>
+<!-- HEADER AND NAVBAR -->
+<header>
+    <nav class="navbar navbar-default" style="margin-bottom: 0px;">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/">logo</a>
+            </div>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#"><i class="fa fa-home"></i> Главная</a></li>
+                <li><a href="#about"><i class="fa fa-shield"></i> Контакты</a></li>
+                <li><a href="#contact"><i class="fa fa-comment"></i> Доставка и сборка</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+<!--<nav class="navbar navbar-inverse" style="margin: 0;"><ul class="nav nav-pills">-->
+    <!--<li role="presentation" class="active"><a href="#">Home</a></li>-->
+    <!--<li role="presentation"><a href="#">Profile</a></li>-->
+    <!--<li role="presentation"><a href="#">Messages</a></li>-->
+<!--</ul></nav>-->
+<div ng-controller="CarouselCtrl" style="height: 305px;">
+    <div style="height: 305px;clear: both;">
+        <carousel interval="myInterval">
+            <slide ng-repeat="slide in slides" active="slide.active">
+                <img ng-src="{{slide.image}}" style="margin:auto;width:700px;height:305px;">
+                <div class="carousel-caption">
+                    <h4>Slide {{$index}}</h4>
+                    <p>{{slide.text}}</p>
+                </div>
+            </slide>
+        </carousel>
+    </div>
+</div>
+<section class="container-fluid" style="clear: both;display: block;">
+    <article class="col-lg-10 " style="border: 2px solid #0086B3;height:auto;box-sizing:border-box;" >
+<div id="main" >
+    <div ng-view ></div>
+</div>
+
+
+    </article>
+    <aside class="col-lg-2" style="border: 2px solid #009926;">
+        <ul  class="nav ulio">
+            <li class="text-center listo" ><a href="#kitchen">Кухня</a></li>
+            <li class="text-center listo" ><a href="#bedroom" >Спальни</a></li>
+            <li class="text-center listo" ><a href="#gostinnaya">Гостинная</a></li>
+            <li class="text-center listo" ><a href="#prihojaya">Прихожая</a></li>
+            <li class="text-center listo" >Столы</li>
+            <li class="text-center listo" >Стуля</li>
+            <li class="text-center listo" >Шкафы</li>
+        </ul>
+    </aside>
+</section>
+</body>
+</html>
