@@ -3,11 +3,11 @@
 <head lang="en" >
     <meta charset="UTF-8">
     <title></title>
-    <script src="bower_components/angular/angular.js"></script>
-    <script src="bower_components/angular-animate/angular-animate.js"></script>
-    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
-    <script src="bower_components/angular-route/angular-route.js"></script>
-    <script src="main.js"></script>
+    <script type="text/javascript" src="bower_components/angular/angular.js"></script>
+    <script type="text/javascript" src="bower_components/angular-animate/angular-animate.js"></script>
+    <script type="text/javascript" src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script type="text/javascript" src="bower_components/angular-route/angular-route.js"></script>
+    <script type="text/javascript" src="main.js"></script>
     <link rel="stylesheet" href="bower_components/booty/css/bootstrap.css"/>
     <link rel="stylesheet" href="supplementary.css"/>
 </head>
@@ -33,8 +33,8 @@
     <!--<li role="presentation"><a href="#">Profile</a></li>-->
     <!--<li role="presentation"><a href="#">Messages</a></li>-->
 <!--</ul></nav>-->
-<div ng-controller="CarouselCtrl" style="height: 305px;">
-    <div style="height: 305px;clear: both;">
+<div ng-controller="CarouselCtrl" style="height: 305px;" class="carousel">
+    <div style="height: 305px;clear: both;" >
         <carousel interval="myInterval">
             <slide ng-repeat="slide in slides" active="slide.active">
                 <img ng-src="{{slide.image}}" style="margin:auto;width:700px;height:305px;">
@@ -47,9 +47,9 @@
     </div>
 </div>
 <section class="container-fluid" style="clear: both;display: block;">
-    <article class="col-lg-10 " style="border: 2px solid #0086B3;height:auto;box-sizing:border-box;" >
-<div id="main" >
-    <div ng-view ></div>
+    <article class="col-lg-10 col-md-10 col-sm-10 " style="border: 2px solid #0086B3;height:auto;box-sizing:border-box;" >
+<div id="main" class="view-animate-container " >
+    <div ng-view class="view-animate"></div>
 </div>
 
 
@@ -60,9 +60,9 @@
             <li class="text-center listo" ><a href="#bedroom" >Спальни</a></li>
             <li class="text-center listo" ><a href="#gostinnaya">Гостинная</a></li>
             <li class="text-center listo" ><a href="#prihojaya">Прихожая</a></li>
-            <li class="text-center listo" >Столы</li>
-            <li class="text-center listo" >Стуля</li>
-            <li class="text-center listo" >Шкафы</li>
+            <li class="text-center listo" ><a href="#stoly">Столы</a></li>
+            <li class="text-center listo" ><a href="#stulya">Стуля</a></li>
+            <li class="text-center listo" ><a href="#shkafy">Шкафы</a></li>
         </ul>
     </aside>
 </section>
