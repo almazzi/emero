@@ -1,6 +1,40 @@
 <!-- kitchen.html -->
-<div ng-repeat="image in images" class="container-fluid">
-    <div class="col-md-3" style="border: 1px solid #eea236;display: inline-block;">
+<div data-ng-include="template.template"></div>
+
+<script type="text/ng-template" id="mebel1.html">
+<div  class="container-fluid" >
+    <div class="col-lg-3 col-sm-3 col-md-3" style="border: 1px solid #eea236;display:inline-block" ng-repeat="image in images">
     <img src="{{image.source}}" style="width:100%;height: auto;"/>
+        <button class="btn btn-success" data-ng-click="detail(image)">Варианты</button>
     </div>
 </div>
+</script>
+
+<!-- template1.html -->
+
+<!-- slider container -->
+<script type="text/ng-template" id="mebel2.html">
+    <div class=" container slider" ng-class="{'pull-left':podrobno}">
+
+        <!-- enumerate all photos -->
+        <img ng-repeat="photo in photos" class="slide" ng-swipe-right="showPrev()" ng-swipe-left="showNext()" ng-show="isActive($index)" ng-src="{{photo.src}}" />
+        <button data-ng-click="podrobno=!podrobno;change_value()"  class="btn btn-success podrobno" >Подробно</button>
+
+        <!-- prev / next controls -->
+        <a class="arrow prev" href="#contact" ng-click="showPrev()"></a>
+        <a class="arrow next" href="#contact" ng-click="showNext()"></a>
+
+        <!-- extra navigation controls -->
+        <ul class="bav">
+            <li data-ng-click = "back()" class="btn btn-success" style="padding:0;">Назад</li>
+            <li ng-repeat="photo in photos" ng-class="{'active':isActive($index)}">
+                <img src="{{photo.src}}" alt="{{photo.desc}}" title="{{photo.desc}}" data-ng-click="showPhoto($index);podrobno=!podrobno" />
+            </li>
+
+        </ul>
+
+    </div>
+
+
+
+</script>
