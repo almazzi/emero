@@ -1,0 +1,21 @@
+{
+  "name": "Emero",
+  "version": "0.0.0",
+  "authors": [
+    "Almaz <almazbeck.dzhuma@gmail.com>"
+  ],
+  "description": "emeregim new version",
+  "main": "public/index.html",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "1.2.16",
+    "bootstrap": "3.1.1"
+  }
+}
